@@ -75,7 +75,22 @@ body{
     margin: 19px;
     cursor: pointer;
 }
-
+/* information */
+.info{
+    padding: 0px 90px;
+    margin: 32px 0px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.info .title{
+    font-weight: 700;
+    font-size: 18px;
+}
+.info .count{
+    color:#4F4F4F;
+    font-size: 14px;
+}
 /* container */
 .container{
     display: grid;
@@ -160,6 +175,18 @@ body{
         grid-template-columns: repeat(1,1fr);
 
     }
+    .header{
+        flex-direction: column;
+        height: auto;
+        margin: 22px 0px;
+        padding: 0px 15px;
+    }
+    .header .logoHeader{
+        align-self: flex-start;
+    }
+    .header .search{
+        align-self: flex-end;
+    }
 }
 
 
@@ -182,6 +209,43 @@ body{
     z-index: 100;
     padding: 90px;
     width: 100vw;
-    height: 460px;
+    min-height: 460px;
     background-color: white;
+}
+
+.backout .displayLocation{
+    border: #333 1px solid;
+    border-radius: 16px;
+    padding: 10px 27px;
+    width: 426px;
+    min-height: 55px;
+}
+.backout .displayLocation span{
+    font-weight: 800;
+    font-size: 11px;
+}
+.backout .containerLocation ul{
+    list-style: none;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.backout .containerLocation input{
+    display: none;
+}
+.backout .containerLocation label{
+    cursor: pointer;
+    margin-top: 28px;
+    border: 1px white solid;
+    padding: 15px;
+    border-radius: 15px;
+    min-width: 300px;
+}
+.backout .containerLocation input:checked  + label{
+    border: 1px#333 solid;
+    box-shadow: 1px 0px 5px rgba(0,0,0,.1);
+}
+.backout ,.containerLocation li::before{
+    content: "📍";
+    margin-right: 10px;
 }
